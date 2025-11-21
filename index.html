@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Useless Facts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 class="title">🤪 Random Useless Facts</h1>
+
+  <div class="card">
+    <p id="fact" class="fact-text">
+      The unicorn is the national animal of Scotland.</p>
+
+    <button id="btn" class="btn">
+      🔄 Get Another Random Fact
+    </button>
+  </div>
+
+  <script>
+    const facts = [
+      "The unicorn is the national animal of Scotland.",
+      "Bananas are berries, but strawberries are not.",
+      "A group of flamingos is called a 'flamboyance'.",
+      "Octopuses have three hearts.",
+      "Some cats are allergic to humans.",
+      "Honey never spoils — archaeologists found 3000-year-old honey still edible.",
+      "Sea otters hold hands when they sleep so they don’t drift apart.",
+      "Cows have best friends and get stressed when separated.",
+      "Snails can sleep for up to 3 years.",
+      "The Eiffel Tower gets taller in summer due to metal expansion."
+    ];
+
+    document.getElementById("btn").onclick = () => {
+      const random = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact").textContent = facts[random];
+    };
+  </script>
+
+</body>
+</html>
